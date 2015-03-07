@@ -12,6 +12,7 @@ class DatasetPresenter < Presenter
         :entity_type => model.entity_type_name,
         :entity_subtype => subtype,
         :stale => model.stale?,
+        :stale_at => model.stale_at,
         :is_deleted => model.deleted?
     }.merge(associated_workspaces_hash)
   end

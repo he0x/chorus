@@ -1,9 +1,17 @@
+<script>
+
+console.log ("stale ==>  {{stale}}:{{stale_at}}" )
+
+</script>
 {{#ifAll hasCredentials viewable}}
     <a class="image" href="{{url}}">
         {{#if stale}}
-            <span class="fa-stack stale_dataset_marker">
-              <span class="fa fa-times fa-stack-1x"></span>
+
+            <span class="fa-stack stale_marker" title="{{t "dataset.stale.tooltip"}}">
+<!--               <span class="fa fa-times fa-stack-1x"></span> -->
+              <span class="fa fa-question fa-stack-1x"></span>
               <span class="fa fa-circle-o fa-stack-2x"></span>
+
             </span>
         {{/if}}
         <img src="{{iconUrl}}" title="{{humanizedDatasetType this}}" alt=""/>
