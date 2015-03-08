@@ -15,7 +15,7 @@ describe("chorus.dialogs.WorkFlowNew", function() {
     });
 
     it("shows some instructional text", function () {
-        expect(this.dialog.$el).toContainTranslation("work_flows.new_dialog.info");
+        expect(this.dialog.$el).toContainTranslation("work_flows.new.info");
     });
 
     it("creates a location picker with the schema section hidden", function(){

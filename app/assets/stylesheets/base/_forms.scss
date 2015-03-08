@@ -69,8 +69,15 @@ fieldset {
     }
 }
 
-.form_pair {
+// a section of the form fields. functions like a subheader
+.form_section {
+        font-weight: $semibold;
+        font-size: $medium-font;
+        color: $color-text2;   
+}
 
+//TODO change to "field_group"
+.form_pair {
     /* default for all form labels = label on line above form element */
     label {
         display: block;

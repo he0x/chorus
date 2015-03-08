@@ -11,7 +11,7 @@ describe("chorus.dialogs.ChangeWorkFlowExecutionLocation", function() {
         });
 
         it("has the right label text", function(){
-            expect(this.dialog.$el).toContainTranslation("work_flows.new_dialog.info");
+            expect(this.dialog.$el).toContainTranslation("work_flows.new.info");
         });
 
         it("has a Save Search Path button", function () {
