@@ -1,6 +1,5 @@
 chorus.pages.DataSourceIndexPage = chorus.pages.Base.extend({
     crumbs:[
-        { label:t("breadcrumbs.home"), url:"#/" },
         { label:t("breadcrumbs.data_sources") }
     ],
     helpId: "instances",

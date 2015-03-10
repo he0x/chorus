@@ -87,17 +87,17 @@ describe("chorus.pages.SchemaDatasetIndexPage", function() {
 
         it("has the right breadcrumbs", function() {
             var breadcrumbs = this.page.$("#breadcrumbs .breadcrumb a");
-            expect(breadcrumbs.eq(0)).toHaveHref("#/");
-            expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.home");
+//             expect(breadcrumbs.eq(0)).toHaveHref("#/");
+//             expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.home");
 
-            expect(breadcrumbs.eq(1)).toHaveHref("#/data_sources");
-            expect(breadcrumbs.eq(1)).toContainTranslation("breadcrumbs.data_sources");
+            expect(breadcrumbs.eq(0)).toHaveHref("#/data_sources");
+            expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.data_sources");
 
-            expect(breadcrumbs.eq(2)).toContainText("ADataSource");
-            expect(breadcrumbs.eq(2)).toHaveHref(this.schema.database().dataSource().showUrl());
+            expect(breadcrumbs.eq(1)).toContainText("ADataSource");
+            expect(breadcrumbs.eq(1)).toHaveHref(this.schema.database().dataSource().showUrl());
 
-            expect(breadcrumbs.eq(3)).toContainText("Foo%");
-            expect(breadcrumbs.eq(3)).toHaveHref(this.schema.database().showUrl());
+            expect(breadcrumbs.eq(2)).toContainText("Foo%");
+            expect(breadcrumbs.eq(2)).toHaveHref(this.schema.database().showUrl());
 
             expect(this.page.$("#breadcrumbs .breadcrumb .slug").text()).toBe(this.page.schema.get("name"));
         });
@@ -111,16 +111,16 @@ describe("chorus.pages.SchemaDatasetIndexPage", function() {
 
             it ("shows the breadcrumbs without the database", function() {
                 var breadcrumbs = this.page.$("#breadcrumbs .breadcrumb a");
-                expect(breadcrumbs.length).toBe(3);
+                expect(breadcrumbs.length).toBe(2);
 
-                expect(breadcrumbs.eq(0)).toHaveHref("#/");
-                expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.home");
+//                 expect(breadcrumbs.eq(0)).toHaveHref("#/");
+//                 expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.home");
 
-                expect(breadcrumbs.eq(1)).toHaveHref("#/data_sources");
-                expect(breadcrumbs.eq(1)).toContainTranslation("breadcrumbs.data_sources");
+                expect(breadcrumbs.eq(0)).toHaveHref("#/data_sources");
+                expect(breadcrumbs.eq(0)).toContainTranslation("breadcrumbs.data_sources");
 
-                expect(breadcrumbs.eq(2)).toContainText("A Data Source");
-                expect(breadcrumbs.eq(2)).toHaveHref(this.schema.dataSource().showUrl());
+                expect(breadcrumbs.eq(1)).toContainText("A Data Source");
+                expect(breadcrumbs.eq(1)).toHaveHref(this.schema.dataSource().showUrl());
 
                 expect(this.page.$("#breadcrumbs .breadcrumb .slug").text()).toBe(this.page.schema.get("name"));
             });

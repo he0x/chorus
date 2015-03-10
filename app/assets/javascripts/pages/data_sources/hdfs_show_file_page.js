@@ -37,7 +37,6 @@ chorus.pages.HdfsShowFilePage = chorus.pages.Base.extend({
         var fileNameCrumb = this.model.get("name");
 
         return [
-            { label: t("breadcrumbs.home"), url: "#/" },
             { label: t("breadcrumbs.data_sources"), url: "#/data_sources" },
             { label: this.hdfsDataSource.loaded ? dataSourceCrumb : "…" , url: "#/hdfs_data_sources/" + this.hdfsDataSource.id + "/browse"},
             { label: this.model.loaded ? fileNameCrumb : "…"}

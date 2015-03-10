@@ -799,7 +799,7 @@ $lozenge-color-selected-dark: $brand-dark;
 
 @mixin grab_cursor {
     cursor: -moz-grab;
-    cursor: -o-grab;
+    // cursor: -o-grab;
     cursor: -ms-grab;
     cursor: -webkit-grab;
     cursor: grab;

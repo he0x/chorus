@@ -57,7 +57,6 @@ chorus.pages.DatasetShowPage = chorus.pages.Base.include(
         crumbs: function() {
             if (!this.dataset.schema()) return [];
             return _.compact([
-                {label: t("breadcrumbs.home"), url: "#/"},
                 {label: t("breadcrumbs.data_sources"), url: '#/data_sources'},
                 {label: this.dataset.dataSource().name(), url: this.dataset.dataSource().showUrl() },
                 this.dataset.database() && {label: this.dataset.database().name(), url: this.dataset.database().showUrl() },

@@ -44,7 +44,6 @@ chorus.pages.SchemaDatasetIndexPage = chorus.pages.Base.include(
 
     crumbs: function() {
         return _.compact([
-            {label: t("breadcrumbs.home"), url: "#/"},
             {label: t("breadcrumbs.data_sources"), url: '#/data_sources'},
             {label: this.schema.dataSource().name(), url: this.schema.dataSource().showUrl() },
             this.schema.database() && {label: this.schema.database().name(), url: this.schema.database().showUrl() },

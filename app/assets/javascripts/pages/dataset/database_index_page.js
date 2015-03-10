@@ -33,7 +33,6 @@ chorus.pages.DatabaseIndexPage = chorus.pages.Base.include(
 
     crumbs: function() {
         return [
-            { label: t("breadcrumbs.home"), url: "#/" },
             { label: t("breadcrumbs.data_sources"), url: "#/data_sources" },
             { label: this.dataSource.get("name") }
         ];

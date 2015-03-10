@@ -44,15 +44,15 @@ describe('chorus.pages.OracleSchemaIndexPage', function(){
         });
 
         it("should have the correct breadcrumbs", function() {
-            expect(this.page.$(".breadcrumb").length).toBe(3);
+            expect(this.page.$(".breadcrumb").length).toBe(2);
 
-            expect(this.page.$(".breadcrumb:eq(0) a").attr("href")).toBe("#/");
-            expect(this.page.$(".breadcrumb:eq(0)")).toContainTranslation("breadcrumbs.home");
+//             expect(this.page.$(".breadcrumb:eq(0) a").attr("href")).toBe("#/");
+//             expect(this.page.$(".breadcrumb:eq(0)")).toContainTranslation("breadcrumbs.home");
 
-            expect(this.page.$(".breadcrumb:eq(1) a").attr("href")).toBe("#/data_sources");
-            expect(this.page.$(".breadcrumb:eq(1)")).toContainTranslation("breadcrumbs.data_sources");
+            expect(this.page.$(".breadcrumb:eq(0) a").attr("href")).toBe("#/data_sources");
+            expect(this.page.$(".breadcrumb:eq(0)")).toContainTranslation("breadcrumbs.data_sources");
 
-            expect(this.page.$(".breadcrumb:eq(2)")).toContainText("Davis");
+            expect(this.page.$(".breadcrumb:eq(1)")).toContainText("Davis");
         });
 
         context("after selecting a schema", function(){

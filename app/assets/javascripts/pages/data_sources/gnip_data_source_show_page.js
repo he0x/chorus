@@ -20,7 +20,6 @@ chorus.pages.GnipDataSourceShowPage = chorus.pages.Base.extend({
 
     crumbs: function() {
         return [
-            {label: t("breadcrumbs.home"), url: "#/"},
             {label: t("breadcrumbs.data_sources"), url: "#/data_sources"},
             {label: this.model.name()}
         ];
