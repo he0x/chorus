@@ -42,6 +42,8 @@ http {
     gzip_types text/plain text/xml application/x-javascript text/css application/javascript application/font-woff font/truetype;
     gzip_min_length  1000;
     gzip_vary on;
+    #cheks for precompressed files first
+    gzip_static on;
 
     server {
         listen      <%if ip6_enabled %>[::]:<% end %><%= chorus_config['server_port'] %> ipv6only=off;
