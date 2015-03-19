@@ -40,8 +40,9 @@ http {
 
     gzip on;
     gzip_types text/plain text/xml application/x-javascript text/css application/javascript application/font-woff font/truetype;
-    gzip_min_length  1000;
+    gzip_min_length  500;
     gzip_vary on;
+    gzip_proxied no-cache no-store;
     #cheks for precompressed files first
     gzip_static on;
 
